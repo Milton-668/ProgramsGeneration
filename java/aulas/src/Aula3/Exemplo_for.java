@@ -67,7 +67,11 @@ public class Exemplo_for {
 		System.out.printf("\nO maior salario inserido foi:%.2f",maiorSal);
 		System.out.printf("\nNumero de pessoas que ganham até R$100,00: %.0f sendo o percentual:%.2f",contador,percentualSal,"%");
 
-
+	}
+	
+	public static void step ()
+	{
+		System.out.println();
 	}
 
 }

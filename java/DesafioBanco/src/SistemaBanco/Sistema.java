@@ -14,25 +14,30 @@ public class Sistema
 		Scanner ler = new Scanner (System.in);
 		
 		
-		int tipo,c1,c2,c3,c4,c5;
-		char mov,desc,opc,ces;
-		double valor,saldo=0.0;
+		byte tipo,c1,c2,c3,c4,c5;
+		char mov,desc,opc,ces='S';
+		double valor=0.0,saldo=0.0;
 		
-		System.out.printf("SELECIONE O TIPO DE CONTA:");
-		step();
-		System.out.printf("1-CONTA POUPANÇA - DATA DE ANIVERSÁRIO CORREÇÃO DE 0.05");
-		step();
-		System.out.printf("2-CONTA CORRENTE - PODE EMITI TALÃO NO MAXIMO 3");
-		step();
-		System.out.printf("3-CONTA ESPECIAL - TEM LIMITE DE CHEQUE ESPECIAL ");
-		step();
-		System.out.printf("4-CONTA EMPRESA - PODE PEDI EMPRESTIMO");
-		step();
-		System.out.printf("5-CONTA ESTUDANTIL - TEM LIMITE ESTUDANTE");//minha
-		tipo=ler.nextInt();
+		
 		
 		do
 		{
+			System.out.printf("SELECIONE O TIPO DE CONTA:");
+			step();
+			System.out.printf("1-CONTA POUPANÇA - DATA DE ANIVERSÁRIO CORREÇÃO DE 0.05");
+			step();
+			System.out.printf("2-CONTA CORRENTE - PODE EMITI TALÃO NO MAXIMO 3");
+			step();
+			System.out.printf("3-CONTA ESPECIAL - TEM LIMITE DE CHEQUE ESPECIAL ");
+			step();
+			System.out.printf("4-CONTA EMPRESA - PODE PEDI EMPRESTIMO");
+			step();
+			System.out.printf("5-CONTA ESTUDANTIL - TEM LIMITE ESTUDANTE");//minha
+			step();
+			System.out.printf("6-SAIR");
+			step();
+			tipo=ler.nextByte();
+			
 			if(tipo==1)
 			{
 				System.out.printf("SELECIONE O MOVIMENTO - D/C:");
@@ -65,9 +70,9 @@ public class Sistema
 		step();
 		System.out.printf("CONTINUA S/N:");
 		opc=ler.next().charAt(0);
-		}while(opc=='S' || opc=='s');
+		}while(opc=='6');
 		
-		while(ces=='S'|| ces=='S')
+		while(ces=='S')
 		{
 			System.out.print("CONTA ESTUDANTIL");
 			System.out.print("DESEJA USAR O LIMITE DE ESTUDANTE - S/N:");

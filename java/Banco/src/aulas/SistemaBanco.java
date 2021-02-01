@@ -1,8 +1,8 @@
-package SistemaBanco;
+package aulas;
 
 import java.util.Scanner;
 
-public class MenuSistemaBancario {
+public class MiniSistemaBancario  {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);

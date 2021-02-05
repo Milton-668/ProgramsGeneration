@@ -1,18 +1,28 @@
 package EmpregadoTipo;
 
 public class EmpregadoTerceiro extends CadastroEmpegado {
-	private double acrescimo=0.01;
+	protected double acrescimo=0.01;
 
-	public EmpregadoTerceiro(String nome, int matricula, int horas, double valorHoras) {
+	public EmpregadoTerceiro(String nome, int matricula, int horas, double valorHoras, double acrescimo) {
 		super(nome, matricula, horas, valorHoras);
-		//this.salarioNormal = salarioNormal;
+		this.acrescimo=acrescimo;
 
+	}
+
+	public double getAcrescimo() {
+		return acrescimo;
+	}
+
+	public void setAcrescimo(double acrescimo) {
+		this.acrescimo = acrescimo;
 	}
 
 	@Override
 	public double salarioNormal() {
-		acrescimo = horas * (valorHoras+(valorHoras*acrescimo));
-		return (acrescimo);
+		
+		return(super.salarioNormal()*acrescimo)+super.salarioNormal();
+		/*acrescimo = horas * (valorHoras+(valorHoras*acrescimo));
+		return (salarioNormal);*/
 	}
 
 }
